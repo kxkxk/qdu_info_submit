@@ -2,9 +2,11 @@
 
 on:
   schedule:
-    - cron: "* * /4 * *"
+    - cron: "0 */4 * * *"
   push:
-    branches: [ main ]
+    branches:
+    - main
+    - own
 
 jobs:
   build:
