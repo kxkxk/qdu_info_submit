@@ -22,7 +22,7 @@ QDU校园集结号每日上报+github action，利用后者实现自动化
 }
 ```
 
-4. enjoy it! 之后的运行结果可以在Actions里看到
+4. enjoy it! 之后的运行结果可以在Actions里看到，每天大概四小时运行一次。
 
 # Extra: 邮件通知
 
