@@ -5,7 +5,7 @@ on:
     - cron: "0 */4 * * *"
   push:
     branches:
-    - own
+    - main
 
 jobs:
   build:
@@ -23,5 +23,7 @@ jobs:
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: run script
+      env:
+        QDU_INFO: ${{ secrets.QDU_INFO }}
       run: |
         python tiwen.py

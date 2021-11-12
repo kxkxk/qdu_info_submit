@@ -1,6 +1,6 @@
 import requests, json, base64, hashlib
 import re
-import sys
+import os
 
 class signin:
     def __init__(self, usr: str, pwd: str):
@@ -155,8 +155,7 @@ def push_request(phone: str, password: str, name: str, stuID: str, academy: str,
     return False
 
 def main():
-    with open('info.json', 'r', encoding='utf-8') as f:
-        option = json.loads(f.read())
+    option = json.loads(os.getenv('QDU_INFO'))
     result = push_request(**option)
     print(result)
     if not result:
